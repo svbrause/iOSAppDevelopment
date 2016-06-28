@@ -1,15 +1,21 @@
 //
-//  SecondViewController.swift
-//  Assignment1
+//  ViewController.swift
+//  Lect3
 //
-//  Created by Cheryl Brause on 6/24/16.
+//  Created by Cheryl Brause on 6/27/16.
 //  Copyright © 2016 Sam Brause. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewController: UIViewController {
 
+    @IBAction func buttonClicked(sender: AnyObject) {
+        print("We were clicked")
+    }
+    
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

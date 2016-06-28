@@ -1,9 +1,9 @@
-      //
-     //  AppDelegate.swift
-    //  Assignment1
-   //
-  //  Created by Cheryl Brause on 6/24/16.
- //  Copyright © 2016 Sam Brause. All rights reserved.
+//
+//  AppDelegate.swift
+//  Lect3
+//
+//  Created by Cheryl Brause on 6/27/16.
+//  Copyright © 2016 Sam Brause. All rights reserved.
 //
 
 import UIKit
