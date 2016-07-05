@@ -514,7 +514,8 @@
                                                         <include reference="qNl-um-AQz"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="38" y="212" width="332" height="31"/>
                                                     <mask key="constraints">
                                                         <exclude reference="3Pz-GC-WdX"/>
                                                         <exclude reference="xMG-2j-Zzv"/>
@@ -613,7 +614,8 @@
                                                         <include reference="ShL-L4-TXt"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="38" y="292" width="332" height="31"/>
                                                     <mask key="constraints">
                                                         <exclude reference="7mY-lV-tPY"/>
                                                     </mask>
