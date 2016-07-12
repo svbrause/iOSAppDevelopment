@@ -21,7 +21,7 @@ class Problem4ViewController: UIViewController {
                 }
             }
         }
-        let results = step(before, count: count)
+        let results = step2(before, count: count)
         let(_, resCount, resCount2) = results
         Problem4Text.text = "Number of living cells: \n" + "(Before) " + String(resCount) + "\n(After) " + String(resCount2)
     }

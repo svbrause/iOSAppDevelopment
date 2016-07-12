@@ -398,15 +398,15 @@ func step2(before: [[Bool]], count: Int) -> ([[Bool]], Int, Int) {
     }
     var after = Array(count: 10, repeatedValue: Array(count: 10, repeatedValue: false))
     var neighbors = Array(count: 10, repeatedValue: Array(count: 10, repeatedValue: 0))
-    var s = Array(count: 10, repeatedValue: Array(count: 10, repeatedValue: Array(count: 10, repeatedValue: (0,0))))
+    var s = Array(count: 11, repeatedValue: Array(count: 11, repeatedValue: Array(count: 11, repeatedValue: (0,0))))
     for a in 1...9{
         for b in 1...9{
             s[a][b] = neighborsA((a, b))
         }
     }
-    for r in 1...9{
-        for g in 1...9{
-            for b in 1...9{
+    for r in 0..<9{
+        for g in 0..<9{
+            for b in 0..<9{
                 let (left, right) = s[r][g][b]
                 if(before[left][right]){
                     neighbors[left][right] += 1

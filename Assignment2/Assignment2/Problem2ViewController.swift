@@ -30,8 +30,8 @@ class Problem2ViewController: UIViewController {
                     switch true{
                         case (a>0&&a<9&&b<9):
                             switch true{
-                                case b>0:
-                                    if(before[a+1][b-1]){
+                                case b>0 :
+                                    if(before[a+1][b-1]==true){
                                         neighbors[a][b] += 1
                                     }
                                     if(before[a-1][b-1]){
