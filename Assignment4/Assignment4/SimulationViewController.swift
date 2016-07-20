@@ -44,7 +44,11 @@ class SimulationViewController: UIViewController, EngineDelegate {
     
     @IBAction func Reinitialize(sender: AnyObject) {
         timer.invalidate()
-        start_step.setTitle("Start", forState: .Normal)
+        if isItOn{
+            start_step.setTitle("Start", forState: .Normal)
+        }else{
+            start_step.setTitle("Step", forState: .Normal)
+        }
         GridView3.grid = StandardEngine.sharedInstance.initialize()
         GridView3.setNeedsDisplay()
     }
