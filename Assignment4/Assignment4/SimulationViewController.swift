@@ -87,6 +87,8 @@ class SimulationViewController: UIViewController, EngineDelegate {
     }
     
     @IBAction func Iterate(sender: AnyObject) {
+        Grid.sharedInstance.rows = GridView3.cols
+        Grid.sharedInstance.cols = GridView3.cols
         if isItOn{
             if(start_step.currentTitle == "Start"){
                 start_step.setTitle("Stop", forState: .Normal)
