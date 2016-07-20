@@ -29,7 +29,11 @@ class SimulationViewController: UIViewController, EngineDelegate {
             }
         }
         timer.invalidate()
-        start_step.setTitle("Start", forState: .Normal)
+        if isItOn{
+            start_step.setTitle("Start", forState: .Normal)
+        }else{
+            start_step.setTitle("Step", forState: .Normal)
+        }
         GridView3.setNeedsDisplay()
     }
     
