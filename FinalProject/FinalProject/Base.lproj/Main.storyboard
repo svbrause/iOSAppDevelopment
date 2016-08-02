@@ -1231,10 +1231,10 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="G1t-hn-0tr"/>
-                                <exclude reference="D7R-J1-ftY"/>
                                 <exclude reference="flC-Q4-X2Q"/>
                                 <exclude reference="oQT-5e-pQk"/>
                                 <exclude reference="pMH-J2-Q1W"/>
+                                <exclude reference="D7R-J1-ftY"/>
                             </mask>
                         </variation>
                     </view>

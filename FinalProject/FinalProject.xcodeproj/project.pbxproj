@@ -90,8 +90,8 @@
 				B447F92E1D4D109500A70B42 /* PongViewController.swift */,
 				B46A6CBE1D513EC6006C93F9 /* WebViewController.swift */,
 				B49E30C71D510F070070483F /* Main.storyboard */,
-				B447F9171D4C16B600A70B42 /* Assets.xcassets */,
 				B447F9191D4C16B600A70B42 /* LaunchScreen.storyboard */,
+				B447F9171D4C16B600A70B42 /* Assets.xcassets */,
 				B447F91C1D4C16B600A70B42 /* Info.plist */,
 				B447F90C1D4C16B600A70B42 /* Products */,
 			);

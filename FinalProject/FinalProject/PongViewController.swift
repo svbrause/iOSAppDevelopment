@@ -86,43 +86,47 @@ class PongViewController: UIViewController {
         startButton.setTitle("Start", forState: .Normal)
     }
     var keepTrackOfBorders=0
+    var count = 0
     func moveAI(timeToChangeItUp: Bool){
         let queue = NSOperationQueue()
-        queue.addOperationWithBlock() {
-            if self.bp0>0 {
-                if(self.p2Min<self.GridView3.cols-1&&self.p2Max<self.GridView3.cols-1&&self.keepTrackOfBorders>0){
-                    self.p2Max += 1
-                    self.p2Min += 1
-                }else{
-                    self.keepTrackOfBorders += 1
-                }
-                for i in 0..<self.GridView3.cols{
-                     self.GridView3.grid[0,i] = .Empty
-                }
+        if(!timeToChangeItUp||count%2==0){
+            queue.addOperationWithBlock() {
+                if self.bp0>0 {
+                    if(self.p2Min<self.GridView3.cols-1&&self.p2Max<self.GridView3.cols-1&&self.keepTrackOfBorders>0){
+                        self.p2Max += 1
+                        self.p2Min += 1
+                    }else{
+                        self.keepTrackOfBorders += 1
+                    }
+                    for i in 0..<self.GridView3.cols{
+                        self.GridView3.grid[0,i] = .Empty
+                    }
 //                print("p2Min: \(self.p2Min) p2Max: \(self.p2Max)")
-                for i in self.p2Min+1...self.p2Max{
-                    self.GridView3.grid[0,i] = .Living
-                    self.p2Paddle[i-self.p2Min-1] = i
-                }
-            }else if self.bp0<0 {
-                for i in 0..<self.GridView3.cols{
-                    self.GridView3.grid[0,i] = .Empty
-                }
-                for i in self.p2Min..<self.p2Max{
-                    self.GridView3.grid[0,i] = .Living
-                    self.p2Paddle[i-self.p2Min] = i
-                }
-                if(self.p2Max>0&&self.p2Min>0&&self.keepTrackOfBorders<self.GridView3.cols-1){
-                    self.p2Max -= 1
-                    self.p2Min -= 1
-                }else{
-                    self.keepTrackOfBorders -= 1
+                    for i in self.p2Min+1...self.p2Max{
+                        self.GridView3.grid[0,i] = .Living
+                        self.p2Paddle[i-self.p2Min-1] = i
+                    }
+                }else if self.bp0<0 {
+                    for i in 0..<self.GridView3.cols{
+                        self.GridView3.grid[0,i] = .Empty
+                    }
+                    for i in self.p2Min..<self.p2Max{
+                        self.GridView3.grid[0,i] = .Living
+                        self.p2Paddle[i-self.p2Min] = i
+                    }
+                    if(self.p2Max>0&&self.p2Min>0&&self.keepTrackOfBorders<self.GridView3.cols-1){
+                        self.p2Max -= 1
+                        self.p2Min -= 1
+                    }else{
+                        self.keepTrackOfBorders -= 1
+                    }
                 }
             }
+            NSOperationQueue.mainQueue().addOperationWithBlock() {
+                self.GridView3.setNeedsDisplayInRect(CGRect(x: 0, y: 0, width: self.GridView3.bounds.width, height:self.GridView3.bounds.height/CGFloat(self.GridView3.rows)))
+            }
         }
-        NSOperationQueue.mainQueue().addOperationWithBlock() {
-            self.GridView3.setNeedsDisplayInRect(CGRect(x: 0, y: 0, width: self.GridView3.bounds.width, height:self.GridView3.bounds.height/CGFloat(self.GridView3.rows)))
-        }
+        count += 1
     }
     
     @IBAction func player2Slider(sender: UISlider) {
@@ -229,7 +233,6 @@ class PongViewController: UIViewController {
                 timeInterval-=0.0001
             }
             startTimer()
-            justDid=true
         }else if(ballPosition.0==GridView3.cols-1){
             bp0 = -1
         }else if(ballPosition.1==GridView3.rows-2&&isTouchingP1){
@@ -248,11 +251,13 @@ class PongViewController: UIViewController {
                 timeInterval-=0.01
             }else if(timeInterval<0.02&&timeInterval>0.001){
                 timeInterval-=0.001
-            }else if(timeInterval<=0.001&&timeInterval>=0.0001){
+            }else if(timeInterval<=0.001&&timeInterval>0.0001){
                 timeInterval-=0.0001
             }
             startTimer()
-            justDid=true
+            if timeInterval==0.0001{
+                justDid=true
+            }
         }else if(ballPosition.1==0){
             timer.invalidate()
             p1Score+=1
