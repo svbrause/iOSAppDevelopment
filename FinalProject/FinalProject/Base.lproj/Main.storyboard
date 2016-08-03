@@ -687,7 +687,13 @@
         <scene sceneID="uiT-ei-XOS">
             <objects>
                 <navigationController id="Y62-5u-taq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Statistics" image="third" id="fNs-j3-I6v"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="third" id="fNs-j3-I6v">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="1" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Al8-fb-3G5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -704,7 +710,13 @@
         <scene sceneID="8CE-Jn-lEc">
             <objects>
                 <navigationController id="6iJ-fO-W02" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Instrumentation" image="first" id="FgH-Iv-T39"/>
+                    <tabBarItem key="tabBarItem" title="Instrumentation" image="first" id="FgH-Iv-T39">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="1" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U8a-oH-96G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -721,7 +733,13 @@
         <scene sceneID="tib-3m-BK4">
             <objects>
                 <navigationController id="Dgs-Ev-E2q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Simulation" image="second" id="z7s-3u-9IR"/>
+                    <tabBarItem key="tabBarItem" title="Simulation" image="second" id="z7s-3u-9IR">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="1" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cKU-TV-qNj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -972,7 +990,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIt-sE-RDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="-833"/>
+            <point key="canvasLocation" x="2262" y="-852"/>
         </scene>
         <!--Configurations-->
         <scene sceneID="gZt-kW-kiU">
@@ -1011,7 +1029,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUB-KV-5SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2927" y="-833"/>
+            <point key="canvasLocation" x="2927" y="-852"/>
         </scene>
         <!--ConfigurationEditor-->
         <scene sceneID="bHa-cP-puQ">
@@ -1113,7 +1131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5oi-Xa-Zih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3600" y="-833"/>
+            <point key="canvasLocation" x="3600" y="-852"/>
         </scene>
         <!--WebView-->
         <scene sceneID="Abt-rA-MXq">

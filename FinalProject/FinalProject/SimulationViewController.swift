@@ -12,6 +12,21 @@ var timer = NSTimer()
 
 class SimulationViewController: UIViewController, EngineDelegate {
 
+    var configurations:Array<Configuration>{
+        get{
+            return StandardEngine.sharedInstance.configurations
+        }set{
+            StandardEngine.sharedInstance.configurations = newValue
+        }
+    }
+    
+    @IBAction func addConfiguration(sender: AnyObject) {
+        configurations.append(Configuration(title: "Add new name...", positions: []))
+        let itemRow = configurations.count - 1
+        let itemPath = NSIndexPath(forRow:itemRow, inSection: 0)
+        ConfigurationViewController.sharedInstance.tableView.insertRowsAtIndexPaths([itemPath], withRowAnimation: .Automatic)
+    }
+    
     @IBAction func clearGrid(sender: AnyObject) {
         rejillaClara()
     }
