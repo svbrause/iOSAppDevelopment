@@ -109,7 +109,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4A-af-Ctx">
-                                                <rect key="frame" x="181" y="87" width="45" height="25"/>
+                                                <rect key="frame" x="180" y="87" width="45" height="25"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="tQe-5j-eiF"/>
@@ -220,7 +220,7 @@
                                             <constraint firstItem="bXs-1Z-Sk3" firstAttribute="height" secondItem="oFB-j1-wNM" secondAttribute="height" id="amN-fL-DQ7"/>
                                             <constraint firstItem="1fQ-1V-kOZ" firstAttribute="centerY" secondItem="Pwy-KP-dxN" secondAttribute="centerY" id="bSy-lQ-UPn"/>
                                             <constraint firstItem="bXs-1Z-Sk3" firstAttribute="leading" secondItem="skb-pJ-4xh" secondAttribute="trailing" constant="10" id="brI-Pl-Wrh"/>
-                                            <constraint firstItem="mTF-cz-NrA" firstAttribute="leading" secondItem="h4A-af-Ctx" secondAttribute="trailing" constant="3" id="bs0-Kr-0yE"/>
+                                            <constraint firstItem="mTF-cz-NrA" firstAttribute="leading" secondItem="h4A-af-Ctx" secondAttribute="trailing" constant="4" id="bs0-Kr-0yE"/>
                                             <constraint firstItem="1fQ-1V-kOZ" firstAttribute="centerX" secondItem="fTR-0A-nDu" secondAttribute="centerX" id="cIE-HB-aBr"/>
                                             <constraint firstItem="BIO-rf-Hee" firstAttribute="leading" secondItem="gVV-0M-VbJ" secondAttribute="trailing" constant="4" id="cJE-Cp-6PD"/>
                                             <constraint firstItem="Uz2-oR-zh0" firstAttribute="top" secondItem="abc-3W-4Dv" secondAttribute="bottom" constant="15" id="cMd-Re-Q1n"/>
